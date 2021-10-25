@@ -1,15 +1,23 @@
-// .card-set {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: calc(-1 * var(--card-set-gap));
-//   margin-left: calc(-1 * var(--card-set-gap));
-// }
+.card-set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
+}
 
-// .card-set__item {
-//   margin-top: var(--card-set-gap);
-//   margin-left: var(--card-set-gap);
-//   flex-basis: calc(100% / 3 - var(--card-set-gap));
-// }
+.card-set__item {
+  @media screen and (min-width: 768px) {
+    margin-top: var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+  }
+}
 
 // .product {
 //   position: relative;

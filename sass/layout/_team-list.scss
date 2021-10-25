@@ -7,8 +7,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
   }
@@ -26,13 +24,11 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: var(--card-set-gap);
-    margin-left: var(--card-set-gap);
     flex-basis: calc(100% / 4 - var(--card-set-gap));
   }
 }
 
-.thumb {
+.team-thumb {
   width: 100%;
   display: flex;
   justify-content: center;

@@ -18,9 +18,20 @@
     <!-- Шапка сайта -->
     <header class="page-header">
       <div class="container header-container">
+        <button class="menu__btn" 
+          type="button"
+          aria-expanded="false"
+          aria-controls="container-menu"
+          data-menu-button>
+          <svg aria-label="Переключатель мобильного меню" width="40" height="40">
+            <use class="cross-icon" href="./images/sprite.svg#cross-icon"></use>
+            <use class="menu-icon" href="./images/sprite.svg#menu-icon"></use>
+          </svg>
+        </button>
+        <div class="container-menu" id="container-menu" data-menu>
         <!-- Главная навигация -->
         <nav class="site-nav">
-            <a class="logo" href="index.html" lang="en">Web<span class="logo--black">Studio</span></a>
+          <a class="logo" href="index.html" lang="en">Web<span class="logo--black">Studio</span></a>
           <ul class="main-nav">
             <li class="main-nav__item"><a href="index.html" class="main-nav__link main-nav__link--current">Студия</a></li>
             <li class="main-nav__item"><a href="portfolio.html" class="main-nav__link">Портфолио</a></li>
@@ -46,6 +57,7 @@
             </a>
           </li>
         </ul>
+        </div>
       </div>
     </header>
     <!-- Уникальный контент страницы -->
@@ -126,7 +138,7 @@
               <h2 class="section__title">Наша команда</h2>
               <ul class="team-list">
                 <li class="team-list__item">
-                  <div class="thumb">
+                  <div class="team-thumb">
                   <img class="team-list__photo" src="./images/product-designer.jpg" alt="Product Designer" width="270">
                   </div>
                   <div class="team-list__wrap">
@@ -165,7 +177,7 @@
                   </div>
                 </li>
                 <li class="team-list__item">
-                  <div class="thumb">
+                  <div class="team-thumb">
                   <img class="team-list__photo" src="./images/frontent-developer.jpg" alt="Frontend Developer" width="270">
                   </div>
                   <div class="team-list__wrap">
@@ -204,7 +216,7 @@
                   </div>
                 </li>
                 <li class="team-list__item">
-                  <div class="thumb">
+                  <div class="team-thumb">
                   <img class="team-list__photo" src="./images/marketing.jpg" alt="Marketing" width="270">
                   </div>
                   <div class="team-list__wrap">
@@ -243,7 +255,7 @@
                   </div>
                 </li>
                 <li class="team-list__item">
-                  <div class="thumb">
+                  <div class="team-thumb">
                   <img class="team-list__photo" src="./images/ui-designer.jpg" alt="UI Designer" width="270">
                   </div>
                   <div class="team-list__wrap">
@@ -452,5 +464,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
   </html>
