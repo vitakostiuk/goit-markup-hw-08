@@ -2,10 +2,6 @@
   display: flex;
   margin-top: calc(-1 * var(--card-set-gap));
   margin-left: calc(-1 * var(--card-set-gap));
-
-  @media screen and (max-width: 1200px) {
-    display: none;
-  }
 }
 
 .service-list__item {
@@ -14,10 +10,6 @@
   display: flex;
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
-
-  @media screen and (max-width: 1200px) {
-    display: none;
-  }
 }
 
 .service-list__title {
@@ -36,8 +28,4 @@
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
-
-  @media screen and (max-width: 1200px) {
-    display: none;
-  }
 }

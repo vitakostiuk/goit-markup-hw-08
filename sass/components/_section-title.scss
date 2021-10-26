@@ -1,9 +1,17 @@
-// .section__title {
-//   margin-bottom: 50px;
+.section__title {
+  margin-bottom: 30px;
 
-//   color: var(--title-text-color);
-//   font-size: 36px;
-//   line-height: 1.2;
-//   text-align: center;
-//   letter-spacing: 0.03em;
-// }
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
