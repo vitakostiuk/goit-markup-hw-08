@@ -1,7 +1,6 @@
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: calc(-1 * var(--card-set-gap));
   margin-left: calc(-1 * var(--card-set-gap));
 }
@@ -29,7 +28,7 @@
   align-items: center;
   justify-content: center;
   height: 92px;
-  width: 210px;
+  width: 100%;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
 
@@ -38,6 +37,10 @@
   &:hover,
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 210px;
   }
 
   @media screen and (min-width: 768px) {

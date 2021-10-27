@@ -18,6 +18,8 @@
   text-align: left;
 
   @media screen and (max-width: 767px) {
+    margin-left: 40px;
+
     &:not(:last-child) {
       margin-bottom: 32px;
     }

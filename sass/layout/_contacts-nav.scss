@@ -1,7 +1,10 @@
 .contacts-nav {
+  margin-bottom: 64px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -15,6 +18,8 @@
   text-align: left;
 
   @media screen and (max-width: 767px) {
+    margin-left: 40px;
+
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -36,8 +41,8 @@
 
 .contacts-nav__link {
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
@@ -51,6 +56,8 @@
   &--tel {
     @media screen and (max-width: 767px) {
       color: var(--accent-color);
+      font-size: 34px;
+      line-height: 1.18;
     }
   }
 
