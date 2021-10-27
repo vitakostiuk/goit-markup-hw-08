@@ -4,6 +4,10 @@
   width: 100%;
   min-height: 80px;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
 }
 
 .header-container {
@@ -11,10 +15,6 @@
   height: 80px;
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (max-width: 767px) {
-    position: relative;
-  }
 }
 
 .site-nav {
@@ -24,7 +24,7 @@
   }
 }
 
-.menu__btn {
+.menu-toggle {
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -34,35 +34,38 @@
   }
 }
 
-.menu__btn .cross-icon {
-  display: none;
-}
+// .menu__btn .cross-icon {
+//   display: none;
+// }
 
-.menu__btn--is-open .cross-icon {
-  display: block;
-}
+// .menu__btn--is-open .cross-icon {
+//   display: block;
+// }
 
-.menu__btn--is-open .menu-icon {
-  display: none;
-}
+// .menu__btn--is-open .menu-icon {
+//   display: none;
+// }
 
-.container-menu {
+.menu-container {
   @media screen and (max-width: 767px) {
+    // display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    min-height: 100vh;
+
     background-color: #ffffff;
-    outline: 1px solid blueviolet;
     padding: 48px 40px;
     text-align: center;
-    // display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    min-height: 796px;
+
+    transform: translateX(100%);
   }
-  &--is-open {
-    display: block;
-  }
+  // &--is-open {
+  //   display: block;
+  // }
 
   @media screen and (min-width: 768px) {
     display: flex;

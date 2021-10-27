@@ -19,17 +19,21 @@
     <header class="page-header">
       <div class="container header-container">
         <a class="logo" href="index.html" lang="en">Web<span class="logo--black">Studio</span></a>
-        <button class="menu__btn" 
+        <button class="menu-toggle js-open-menu" 
           type="button"
           aria-expanded="false"
-          aria-controls="container-menu"
-          data-menu-button>
+          aria-controls="mobile-menu">
           <svg aria-label="Переключатель мобильного меню" width="40" height="40">
-            <use class="cross-icon" href="./images/sprite.svg#cross-icon"></use>
             <use class="menu-icon" href="./images/sprite.svg#menu-icon"></use>
           </svg>
         </button>
-        <div class="container-menu" id="container-menu" data-menu>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"
+              data-menu-button>
+              <svg aria-label="Переключатель мобильного меню" width="40" height="40">
+                <use class="cross-icon" href="./images/sprite.svg#cross-icon"></use>
+              </svg>
+            </button>
         <!-- Главная навигация -->
         <nav class="site-nav">
           <ul class="main-nav">
