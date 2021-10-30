@@ -679,28 +679,6 @@ body.modal-open {
   }
 }
 
-.team-thumb {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .team-thumb {
-    width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team-thumb {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-thumb {
-    width: 270px;
-  }
-}
-
 .team-list__wrap {
   padding: 30px 0;
   text-align: center;
