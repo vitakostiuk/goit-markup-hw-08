@@ -24,6 +24,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: none;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -65,6 +66,7 @@
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+  outline: none;
 
   &::placeholder {
     font-size: 12px;
@@ -79,25 +81,45 @@
   }
 }
 
+// .checkbox {
+//   display: block;
+//   margin-top: 20px;
+//   margin-bottom: 30px;
+//   width: 100%;
+//   font-size: 12px;
+//   line-height: 1.17;
+//   color: var(--primary-text-color);
+
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 20px;
+//     margin-bottom: 30px;
+//     font-size: 11px;
+//     line-height: 1.17;
+//     color: var(--primary-text-color);
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     margin-top: 25px;
+
+//     font-size: 14px;
+//     line-height: 1.71;
+//   }
+// }
+
 .checkbox {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-size: 11px;
+  line-height: 1.17;
   margin-top: 20px;
   margin-bottom: 30px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
   color: var(--primary-text-color);
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 11px;
-    line-height: 1.17;
-    color: var(--primary-text-color);
-  }
 
   @media screen and (min-width: 906px) {
     font-size: 12px;
@@ -105,8 +127,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 25px;
-
     font-size: 14px;
     line-height: 1.71;
   }
@@ -115,6 +135,10 @@
 .checkbox__link {
   text-decoration: underline;
   margin-left: 3px;
+  &:visited,
+  &:active {
+    color: var(--accent-color);
+  }
 }
 
 .checkbox__icon {
@@ -133,5 +157,10 @@
 }
 
 .btn--form-center {
-  margin: 0 auto;
+  @media screen and (max-width: 280px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 281px) {
+    margin: 0 auto;
+  }
 }

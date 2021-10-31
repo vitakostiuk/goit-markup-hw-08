@@ -77,6 +77,10 @@
 
 /* Иконки в контактах */
 .contacts-nav__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   @media screen and (min-width: 768px) {
     fill: currentColor;
     margin-right: 10px;

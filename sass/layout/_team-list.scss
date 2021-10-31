@@ -13,6 +13,12 @@
   background-color: #ffffff;
   box-shadow: var(--card-shadow);
 
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: var(--card-set-gap);
+    }
+  }
+
   @media screen and (min-width: 768px) {
     margin-top: var(--card-set-gap);
     margin-left: var(--card-set-gap);

@@ -240,6 +240,10 @@ body.modal-open {
   background-color: transparent;
 }
 
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
@@ -475,6 +479,12 @@ body.modal-open {
 }
 
 /* Иконки в контактах */
+@media screen and (max-width: 767px) {
+  .contacts-nav__icon {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contacts-nav__icon {
     fill: currentColor;
@@ -497,31 +507,31 @@ body.modal-open {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero-mobile@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@2x.jpg);
   }
 }
 
 @media screen and (min-width: 481px) {
   .hero {
-    background-image: url(../images/hero-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
   }
 }
 
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero-tablet@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet@2x.jpg);
   }
 }
 
 @media screen and (min-width: 769px) {
   .hero {
-    background-image: url(../images/hero-desktop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop.jpg);
   }
 }
 
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hero-desktop@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop@2x.jpg);
   }
 }
 
@@ -663,6 +673,12 @@ body.modal-open {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
   box-shadow: var(--card-shadow);
+}
+
+@media screen and (max-width: 767px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: var(--card-set-gap);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -882,7 +898,7 @@ body.modal-open {
 }
 
 .form-field__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   margin-bottom: 20px;
   padding-top: 15px;
@@ -905,8 +921,15 @@ body.modal-open {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 480px) {
+  .form-field__input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .form-field__input {
+    width: 358px;
     display: block;
     margin-bottom: 0;
   }
@@ -996,6 +1019,12 @@ body.modal-open {
   }
 }
 
+.product__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .card-set__item {
     margin-bottom: var(--card-set-gap);
@@ -1018,6 +1047,7 @@ body.modal-open {
 
 .product {
   position: relative;
+  height: 100%;
   background-color: #ffffff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1030,7 +1060,6 @@ body.modal-open {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 294px;
 }
 
 @media screen and (min-width: 480px) {
@@ -1057,9 +1086,8 @@ body.modal-open {
   left: 0;
   height: 100%;
   width: 100%;
-  padding-top: 63px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px;
+  overflow-y: scroll;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
@@ -1074,9 +1102,28 @@ body.modal-open {
   transform: translateY(0);
 }
 
+@media screen and (min-width: 480px) {
+  .thumb__text {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .thumb__text {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .thumb__text {
+    padding: 63px 24px;
+  }
+}
+
 .product__meta {
-  display: block;
+  flex-grow: 1;
   padding: 20px 24px;
+  background-color: #ffffff;
   border: var(--card-border);
   border-top: none;
 }
@@ -1134,7 +1181,7 @@ body.modal-open {
     top: 50%;
     left: 50%;
     min-width: 450px;
-    height: 609px;
+    overflow-y: scroll;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1146,7 +1193,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .modal {
     min-width: 528px;
-    height: 581px;
   }
 }
 
@@ -1209,6 +1255,7 @@ body.modal-open {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1246,6 +1293,7 @@ body.modal-open {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+  outline: none;
 }
 
 .form-modal__input--comment::placeholder {
@@ -1263,26 +1311,15 @@ body.modal-open {
 }
 
 .checkbox {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1.17;
   margin-top: 20px;
   margin-bottom: 30px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
   color: var(--primary-text-color);
-}
-
-@media screen and (min-width: 768px) {
-  .checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 11px;
-    line-height: 1.17;
-    color: var(--primary-text-color);
-  }
 }
 
 @media screen and (min-width: 906px) {
@@ -1294,7 +1331,6 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .checkbox {
-    margin-top: 25px;
     font-size: 14px;
     line-height: 1.71;
   }
@@ -1303,6 +1339,10 @@ body.modal-open {
 .checkbox__link {
   text-decoration: underline;
   margin-left: 3px;
+}
+
+.checkbox__link:visited, .checkbox__link:active {
+  color: var(--accent-color);
 }
 
 .checkbox__icon {
@@ -1320,7 +1360,15 @@ body.modal-open {
   background-repeat: no-repeat;
 }
 
-.btn--form-center {
-  margin: 0 auto;
+@media screen and (max-width: 280px) {
+  .btn--form-center {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 281px) {
+  .btn--form-center {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
