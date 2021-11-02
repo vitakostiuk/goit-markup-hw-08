@@ -1037,6 +1037,7 @@ body.modal-open {
 
 @media screen and (max-width: 767px) {
   .card-set__item {
+    max-width: 100%;
     margin-bottom: var(--card-set-gap);
   }
 }
