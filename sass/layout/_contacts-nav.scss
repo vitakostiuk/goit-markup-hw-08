@@ -1,5 +1,7 @@
 .contacts-nav {
-  margin-bottom: 64px;
+  @media screen and (max-width: 767px) {
+    margin-top: auto;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
