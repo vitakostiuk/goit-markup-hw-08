@@ -949,7 +949,6 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
   height: 50px;
   margin: 0 auto;
   padding-top: 10px;
@@ -961,6 +960,18 @@ body.modal-open {
 
 .btn--form:hover, .btn--form:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 230px) {
+  .btn--form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 231px) {
+  .btn--form {
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
