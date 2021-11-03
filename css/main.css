@@ -1207,14 +1207,14 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 50%;
     min-width: 450px;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .backdrop--hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translateX(-50%) scale(0.5);
   }
 }
 
