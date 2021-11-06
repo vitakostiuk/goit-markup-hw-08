@@ -1273,6 +1273,11 @@ body.modal-open {
   color: var(--primary-text-color);
 }
 
+.wrap-input {
+  display: block;
+  position: relative;
+}
+
 .form-modal__input {
   display: block;
   width: 100%;
@@ -1293,12 +1298,6 @@ body.modal-open {
 
 .form-modal__input:focus + .form-modal__icon {
   fill: var(--accent-color);
-  transform: translateY(50%);
-}
-
-.wrap-input {
-  display: block;
-  position: relative;
 }
 
 .form-modal__icon {
