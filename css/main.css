@@ -1297,6 +1297,7 @@ body.modal-open {
 }
 
 .wrap-input {
+  display: block;
   position: relative;
 }
 
@@ -1307,7 +1308,7 @@ body.modal-open {
   width: 18px;
   height: 18px;
   fill: #000000;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
